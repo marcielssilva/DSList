@@ -1,10 +1,9 @@
 package com.marcielssilva.dslist.dto;
 
+import javax.swing.text.Position;
+
 import com.marcielssilva.dslist.entities.Game;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.marcielssilva.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -22,6 +21,16 @@ public class GameMinDTO {
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
     }
+    
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
+
+    }
+    
 
     public Long getId() {
         return id;
