@@ -1,7 +1,5 @@
 package com.marcielssilva.dslist.dto;
 
-import javax.swing.text.Position;
-
 import com.marcielssilva.dslist.entities.Game;
 import com.marcielssilva.dslist.projections.GameMinProjection;
 
